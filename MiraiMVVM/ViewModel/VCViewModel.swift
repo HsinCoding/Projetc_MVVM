@@ -45,11 +45,7 @@ class VCViewModel: NSObject, APIManagerDelegate {
                 index += 1
                 self.fetchAllUser(since:String(index))
             }
-            
-           
         }
-        
-       
     }
     
 }

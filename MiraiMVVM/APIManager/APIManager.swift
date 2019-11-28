@@ -18,8 +18,6 @@ class APIManager: NSObject {
     weak var delegate: APIManagerDelegate?
     static let shared = APIManager()
  
-    
-    
     func fetchAllUser(since: String) {
         let urlString = "https://api.github.com/users?since=\(since)"
         let url = URL(string:urlString)!
@@ -29,7 +27,7 @@ class APIManager: NSObject {
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
-                //error handing
+                print(error?.localizedDescription)
             } else {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data!, options: [])
@@ -63,7 +61,7 @@ class APIManager: NSObject {
                     self.delegate?.fetchAllUserSuccess(_presenter: self, didfetch: dataArray)
                     
                 } catch  {
-                    print(error)
+                    print(error.localizedDescription)
                 }
             }
             
