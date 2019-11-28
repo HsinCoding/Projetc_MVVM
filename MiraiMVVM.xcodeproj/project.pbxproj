@@ -22,6 +22,10 @@
 		CEA81B98238FA75B00569E38 /* VCListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B96238FA75B00569E38 /* VCListCell.swift */; };
 		CEA81B99238FA75B00569E38 /* VCListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA81B97238FA75B00569E38 /* VCListCell.xib */; };
 		CEA81B9C238FB19600569E38 /* ExtensionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B9B238FB19600569E38 /* ExtensionObject.swift */; };
+		CEA81BA0238FF48800569E38 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B9F238FF48800569E38 /* DetailsViewModel.swift */; };
+		CEA81BA3239001A600569E38 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81BA1239001A600569E38 /* DetailsViewController.swift */; };
+		CEA81BA4239001A600569E38 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA81BA2239001A600569E38 /* DetailsViewController.xib */; };
+		CEA81BA62390055A00569E38 /* DetailsVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81BA52390055A00569E38 /* DetailsVCViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		CEA81B96238FA75B00569E38 /* VCListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCListCell.swift; sourceTree = "<group>"; };
 		CEA81B97238FA75B00569E38 /* VCListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCListCell.xib; sourceTree = "<group>"; };
 		CEA81B9B238FB19600569E38 /* ExtensionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionObject.swift; sourceTree = "<group>"; };
+		CEA81B9F238FF48800569E38 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		CEA81BA1239001A600569E38 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		CEA81BA2239001A600569E38 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		CEA81BA52390055A00569E38 /* DetailsVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVCViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				CEA81B5D238E615F00569E38 /* ViewController.swift */,
+				CEA81BA1239001A600569E38 /* DetailsViewController.swift */,
+				CEA81BA2239001A600569E38 /* DetailsViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,7 +169,9 @@
 			isa = PBXGroup;
 			children = (
 				CEA81B8E238E6DE000569E38 /* VCViewModel.swift */,
+				CEA81BA52390055A00569E38 /* DetailsVCViewModel.swift */,
 				CEA81B93238E758900569E38 /* ListCellViewModel.swift */,
+				CEA81B9F238FF48800569E38 /* DetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -295,6 +307,7 @@
 			files = (
 				CEA81B99238FA75B00569E38 /* VCListCell.xib in Resources */,
 				CEA81B69238E615F00569E38 /* LaunchScreen.storyboard in Resources */,
+				CEA81BA4239001A600569E38 /* DetailsViewController.xib in Resources */,
 				CEA81B66238E615F00569E38 /* Assets.xcassets in Resources */,
 				CEA81B61238E615F00569E38 /* Main.storyboard in Resources */,
 			);
@@ -324,10 +337,13 @@
 				CEA81B98238FA75B00569E38 /* VCListCell.swift in Sources */,
 				CEA81B94238E758900569E38 /* ListCellViewModel.swift in Sources */,
 				CEA81B92238E736100569E38 /* APIManager.swift in Sources */,
+				CEA81BA3239001A600569E38 /* DetailsViewController.swift in Sources */,
 				CEA81B5E238E615F00569E38 /* ViewController.swift in Sources */,
 				CEA81B5A238E615F00569E38 /* AppDelegate.swift in Sources */,
+				CEA81BA62390055A00569E38 /* DetailsVCViewModel.swift in Sources */,
 				CEA81B8F238E6DE000569E38 /* VCViewModel.swift in Sources */,
 				CEA81B9C238FB19600569E38 /* ExtensionObject.swift in Sources */,
+				CEA81BA0238FF48800569E38 /* DetailsViewModel.swift in Sources */,
 				CEA81B64238E615F00569E38 /* MiraiMVVM.xcdatamodeld in Sources */,
 				CEA81B5C238E615F00569E38 /* SceneDelegate.swift in Sources */,
 			);

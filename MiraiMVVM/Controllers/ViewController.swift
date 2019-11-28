@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,APIManagerDelegate {
 
 
     @IBOutlet weak var tableView: UITableView!
@@ -23,7 +23,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         bindViewModel()
         registerCustomCell()
         viewModel.fetchAllUser(since: "0")
-        
+      
         
     }
     
@@ -34,7 +34,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     // MARK: - Bind ViewModel
-    
     func bindViewModel() {
          viewModel.onRequestEnd = { [weak self] in
              DispatchQueue.main.async {
@@ -63,8 +62,14 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return cell
     }
     
+    // MARK: - UITableViewDelegate
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailsVC = DetailsViewController()
+        let listCellViewModel = viewModel.listCellViewModels[indexPath.row]
+        detailsVC.username = listCellViewModel.login
+        self.present(detailsVC, animated: true, completion: nil)
+    }
     
 
 }

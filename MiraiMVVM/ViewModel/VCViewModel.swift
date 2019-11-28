@@ -18,7 +18,7 @@ class VCViewModel: NSObject, APIManagerDelegate {
     
     //Methods
     func fetchAllUser(since: String) {
-        APIManager.shared.fetchAllUser(since: since)
+        APIManager.shared.fetchAllUsers(since: since)
         APIManager.shared.delegate = self
     }
     
