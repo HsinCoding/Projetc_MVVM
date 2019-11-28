@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEA81B5A238E615F00569E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B59238E615F00569E38 /* AppDelegate.swift */; };
+		CEA81B5C238E615F00569E38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B5B238E615F00569E38 /* SceneDelegate.swift */; };
+		CEA81B5E238E615F00569E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B5D238E615F00569E38 /* ViewController.swift */; };
+		CEA81B61238E615F00569E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA81B5F238E615F00569E38 /* Main.storyboard */; };
+		CEA81B64238E615F00569E38 /* MiraiMVVM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B62238E615F00569E38 /* MiraiMVVM.xcdatamodeld */; };
+		CEA81B66238E615F00569E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA81B65238E615F00569E38 /* Assets.xcassets */; };
+		CEA81B69238E615F00569E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA81B67238E615F00569E38 /* LaunchScreen.storyboard */; };
+		CEA81B74238E616000569E38 /* MiraiMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B73238E616000569E38 /* MiraiMVVMTests.swift */; };
+		CEA81B7F238E616000569E38 /* MiraiMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B7E238E616000569E38 /* MiraiMVVMUITests.swift */; };
+		CEA81B8F238E6DE000569E38 /* VCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B8E238E6DE000569E38 /* VCViewModel.swift */; };
+		CEA81B92238E736100569E38 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B91238E736100569E38 /* APIManager.swift */; };
+		CEA81B94238E758900569E38 /* ListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B93238E758900569E38 /* ListCellViewModel.swift */; };
+		CEA81B98238FA75B00569E38 /* VCListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B96238FA75B00569E38 /* VCListCell.swift */; };
+		CEA81B99238FA75B00569E38 /* VCListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA81B97238FA75B00569E38 /* VCListCell.xib */; };
+		CEA81B9C238FB19600569E38 /* ExtensionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B9B238FB19600569E38 /* ExtensionObject.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEA81B70238E616000569E38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA81B4E238E615F00569E38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEA81B55238E615F00569E38;
+			remoteInfo = MiraiMVVM;
+		};
+		CEA81B7B238E616000569E38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA81B4E238E615F00569E38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEA81B55238E615F00569E38;
+			remoteInfo = MiraiMVVM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEA81B56238E615F00569E38 /* MiraiMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiraiMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA81B59238E615F00569E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEA81B5B238E615F00569E38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CEA81B5D238E615F00569E38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEA81B60238E615F00569E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEA81B63238E615F00569E38 /* MiraiMVVM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiraiMVVM.xcdatamodel; sourceTree = "<group>"; };
+		CEA81B65238E615F00569E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEA81B68238E615F00569E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEA81B6A238E615F00569E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA81B6F238E616000569E38 /* MiraiMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiraiMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA81B73238E616000569E38 /* MiraiMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiraiMVVMTests.swift; sourceTree = "<group>"; };
+		CEA81B75238E616000569E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA81B7A238E616000569E38 /* MiraiMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiraiMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA81B7E238E616000569E38 /* MiraiMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiraiMVVMUITests.swift; sourceTree = "<group>"; };
+		CEA81B80238E616000569E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA81B8E238E6DE000569E38 /* VCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCViewModel.swift; sourceTree = "<group>"; };
+		CEA81B91238E736100569E38 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		CEA81B93238E758900569E38 /* ListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellViewModel.swift; sourceTree = "<group>"; };
+		CEA81B96238FA75B00569E38 /* VCListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCListCell.swift; sourceTree = "<group>"; };
+		CEA81B97238FA75B00569E38 /* VCListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCListCell.xib; sourceTree = "<group>"; };
+		CEA81B9B238FB19600569E38 /* ExtensionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionObject.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEA81B53238E615F00569E38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA81B6C238E616000569E38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA81B77238E616000569E38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEA81B4D238E615F00569E38 = {
+			isa = PBXGroup;
+			children = (
+				CEA81B58238E615F00569E38 /* MiraiMVVM */,
+				CEA81B72238E616000569E38 /* MiraiMVVMTests */,
+				CEA81B7D238E616000569E38 /* MiraiMVVMUITests */,
+				CEA81B57238E615F00569E38 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEA81B57238E615F00569E38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81B56238E615F00569E38 /* MiraiMVVM.app */,
+				CEA81B6F238E616000569E38 /* MiraiMVVMTests.xctest */,
+				CEA81B7A238E616000569E38 /* MiraiMVVMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEA81B58238E615F00569E38 /* MiraiMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81B9A238FB17F00569E38 /* Tool */,
+				CEA81B95238FA73C00569E38 /* Cell */,
+				CEA81B90238E734D00569E38 /* APIManager */,
+				CEA81B8D238E6DC200569E38 /* ViewModel */,
+				CEA81B8C238E6DA900569E38 /* Controllers */,
+				CEA81B59238E615F00569E38 /* AppDelegate.swift */,
+				CEA81B5B238E615F00569E38 /* SceneDelegate.swift */,
+				CEA81B5F238E615F00569E38 /* Main.storyboard */,
+				CEA81B65238E615F00569E38 /* Assets.xcassets */,
+				CEA81B67238E615F00569E38 /* LaunchScreen.storyboard */,
+				CEA81B6A238E615F00569E38 /* Info.plist */,
+				CEA81B62238E615F00569E38 /* MiraiMVVM.xcdatamodeld */,
+			);
+			path = MiraiMVVM;
+			sourceTree = "<group>";
+		};
+		CEA81B72238E616000569E38 /* MiraiMVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81B73238E616000569E38 /* MiraiMVVMTests.swift */,
+				CEA81B75238E616000569E38 /* Info.plist */,
+			);
+			path = MiraiMVVMTests;
+			sourceTree = "<group>";
+		};
+		CEA81B7D238E616000569E38 /* MiraiMVVMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81B7E238E616000569E38 /* MiraiMVVMUITests.swift */,
+				CEA81B80238E616000569E38 /* Info.plist */,
+			);
+			path = MiraiMVVMUITests;
+			sourceTree = "<group>";
+		};
+		CEA81B8C238E6DA900569E38 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81B5D238E615F00569E38 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CEA81B8D238E6DC200569E38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81B8E238E6DE000569E38 /* VCViewModel.swift */,
+				CEA81B93238E758900569E38 /* ListCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CEA81B90238E734D00569E38 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81B91238E736100569E38 /* APIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		CEA81B95238FA73C00569E38 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81B96238FA75B00569E38 /* VCListCell.swift */,
+				CEA81B97238FA75B00569E38 /* VCListCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CEA81B9A238FB17F00569E38 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				CEA81B9B238FB19600569E38 /* ExtensionObject.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEA81B55238E615F00569E38 /* MiraiMVVM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA81B83238E616000569E38 /* Build configuration list for PBXNativeTarget "MiraiMVVM" */;
+			buildPhases = (
+				CEA81B52238E615F00569E38 /* Sources */,
+				CEA81B53238E615F00569E38 /* Frameworks */,
+				CEA81B54238E615F00569E38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiraiMVVM;
+			productName = MiraiMVVM;
+			productReference = CEA81B56238E615F00569E38 /* MiraiMVVM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEA81B6E238E616000569E38 /* MiraiMVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA81B86238E616000569E38 /* Build configuration list for PBXNativeTarget "MiraiMVVMTests" */;
+			buildPhases = (
+				CEA81B6B238E616000569E38 /* Sources */,
+				CEA81B6C238E616000569E38 /* Frameworks */,
+				CEA81B6D238E616000569E38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEA81B71238E616000569E38 /* PBXTargetDependency */,
+			);
+			name = MiraiMVVMTests;
+			productName = MiraiMVVMTests;
+			productReference = CEA81B6F238E616000569E38 /* MiraiMVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEA81B79238E616000569E38 /* MiraiMVVMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA81B89238E616000569E38 /* Build configuration list for PBXNativeTarget "MiraiMVVMUITests" */;
+			buildPhases = (
+				CEA81B76238E616000569E38 /* Sources */,
+				CEA81B77238E616000569E38 /* Frameworks */,
+				CEA81B78238E616000569E38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEA81B7C238E616000569E38 /* PBXTargetDependency */,
+			);
+			name = MiraiMVVMUITests;
+			productName = MiraiMVVMUITests;
+			productReference = CEA81B7A238E616000569E38 /* MiraiMVVMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEA81B4E238E615F00569E38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = hsin_project;
+				TargetAttributes = {
+					CEA81B55238E615F00569E38 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					CEA81B6E238E616000569E38 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = CEA81B55238E615F00569E38;
+					};
+					CEA81B79238E616000569E38 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = CEA81B55238E615F00569E38;
+					};
+				};
+			};
+			buildConfigurationList = CEA81B51238E615F00569E38 /* Build configuration list for PBXProject "MiraiMVVM" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEA81B4D238E615F00569E38;
+			productRefGroup = CEA81B57238E615F00569E38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEA81B55238E615F00569E38 /* MiraiMVVM */,
+				CEA81B6E238E616000569E38 /* MiraiMVVMTests */,
+				CEA81B79238E616000569E38 /* MiraiMVVMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEA81B54238E615F00569E38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA81B99238FA75B00569E38 /* VCListCell.xib in Resources */,
+				CEA81B69238E615F00569E38 /* LaunchScreen.storyboard in Resources */,
+				CEA81B66238E615F00569E38 /* Assets.xcassets in Resources */,
+				CEA81B61238E615F00569E38 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA81B6D238E616000569E38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA81B78238E616000569E38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEA81B52238E615F00569E38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA81B98238FA75B00569E38 /* VCListCell.swift in Sources */,
+				CEA81B94238E758900569E38 /* ListCellViewModel.swift in Sources */,
+				CEA81B92238E736100569E38 /* APIManager.swift in Sources */,
+				CEA81B5E238E615F00569E38 /* ViewController.swift in Sources */,
+				CEA81B5A238E615F00569E38 /* AppDelegate.swift in Sources */,
+				CEA81B8F238E6DE000569E38 /* VCViewModel.swift in Sources */,
+				CEA81B9C238FB19600569E38 /* ExtensionObject.swift in Sources */,
+				CEA81B64238E615F00569E38 /* MiraiMVVM.xcdatamodeld in Sources */,
+				CEA81B5C238E615F00569E38 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA81B6B238E616000569E38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA81B74238E616000569E38 /* MiraiMVVMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA81B76238E616000569E38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA81B7F238E616000569E38 /* MiraiMVVMUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEA81B71238E616000569E38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEA81B55238E615F00569E38 /* MiraiMVVM */;
+			targetProxy = CEA81B70238E616000569E38 /* PBXContainerItemProxy */;
+		};
+		CEA81B7C238E616000569E38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEA81B55238E615F00569E38 /* MiraiMVVM */;
+			targetProxy = CEA81B7B238E616000569E38 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEA81B5F238E615F00569E38 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEA81B60238E615F00569E38 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEA81B67238E615F00569E38 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEA81B68238E615F00569E38 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEA81B81238E616000569E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEA81B82238E616000569E38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEA81B84238E616000569E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiraiMVVM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hsin-project.MiraiMVVM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEA81B85238E616000569E38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiraiMVVM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hsin-project.MiraiMVVM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEA81B87238E616000569E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiraiMVVMTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hsin-project.MiraiMVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiraiMVVM.app/MiraiMVVM";
+			};
+			name = Debug;
+		};
+		CEA81B88238E616000569E38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiraiMVVMTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hsin-project.MiraiMVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiraiMVVM.app/MiraiMVVM";
+			};
+			name = Release;
+		};
+		CEA81B8A238E616000569E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiraiMVVMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hsin-project.MiraiMVVMUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiraiMVVM;
+			};
+			name = Debug;
+		};
+		CEA81B8B238E616000569E38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiraiMVVMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hsin-project.MiraiMVVMUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiraiMVVM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEA81B51238E615F00569E38 /* Build configuration list for PBXProject "MiraiMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA81B81238E616000569E38 /* Debug */,
+				CEA81B82238E616000569E38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA81B83238E616000569E38 /* Build configuration list for PBXNativeTarget "MiraiMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA81B84238E616000569E38 /* Debug */,
+				CEA81B85238E616000569E38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA81B86238E616000569E38 /* Build configuration list for PBXNativeTarget "MiraiMVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA81B87238E616000569E38 /* Debug */,
+				CEA81B88238E616000569E38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA81B89238E616000569E38 /* Build configuration list for PBXNativeTarget "MiraiMVVMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA81B8A238E616000569E38 /* Debug */,
+				CEA81B8B238E616000569E38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CEA81B62238E615F00569E38 /* MiraiMVVM.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEA81B63238E615F00569E38 /* MiraiMVVM.xcdatamodel */,
+			);
+			currentVersion = CEA81B63238E615F00569E38 /* MiraiMVVM.xcdatamodel */;
+			path = MiraiMVVM.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CEA81B4E238E615F00569E38 /* Project object */;
+}
