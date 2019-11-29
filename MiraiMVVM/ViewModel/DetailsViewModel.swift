@@ -78,7 +78,7 @@ class DetailsViewModel: NSObject  {
                imageDownloaded(image)
             
            } catch let error {
-               print(error)
+            print(error.localizedDescription)
            }
         }
     }

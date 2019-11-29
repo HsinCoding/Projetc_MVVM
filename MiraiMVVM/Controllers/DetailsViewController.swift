@@ -21,6 +21,7 @@ class DetailsViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var blogLabel: UILabel!
     @IBOutlet weak var siteAdminView: UIView!
     @IBOutlet weak var blogTextView: UITextView!
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,8 @@ class DetailsViewController: UIViewController, UITextViewDelegate {
         self.setUI()
         bindViewModel()
         viewModel.fetchSingleUser(username: self.username)
+        self.activityView.startAnimating()
     }
-    
     
     // MARK: - UI Setting
      func setUI() {
@@ -43,6 +44,7 @@ class DetailsViewController: UIViewController, UITextViewDelegate {
         self.viewModel.onRequestEnd = { [weak self] in
             DispatchQueue.main.async {
                 self?.setData(model: (self?.viewModel.detailsViewModel)!)
+                self?.activityView.stopAnimating()
             }
         }
     }
@@ -82,7 +84,6 @@ class DetailsViewController: UIViewController, UITextViewDelegate {
     }
     
     // MARK: - Dismiss VC
-    
     @IBAction func dismissAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

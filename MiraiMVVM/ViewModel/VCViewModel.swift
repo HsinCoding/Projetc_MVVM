@@ -15,6 +15,7 @@ class VCViewModel: NSObject, APIManagerDelegate {
     public var listCellViewModels: [ListCellViewModel] = []
     var manager:APIManager?
     var index: Int = 0
+    var limitedCount = 100
     
     //Methods
     func fetchAllUser(since: String) {
@@ -26,7 +27,7 @@ class VCViewModel: NSObject, APIManagerDelegate {
     func fetchAllUserSuccess(_presenter: APIManager, didfetch users: [ListCellViewModel]) {
         if listCellViewModels.count == 0 {
             listCellViewModels = users
-            if listCellViewModels.count < 100 {
+            if listCellViewModels.count < limitedCount {
                 index += 1
                 self.fetchAllUser(since:String(index))
             }
@@ -34,13 +35,13 @@ class VCViewModel: NSObject, APIManagerDelegate {
         
             for item in users {
                 listCellViewModels.append(item)
-                if listCellViewModels.count == 100 {
+                if listCellViewModels.count == limitedCount {
                     onRequestEnd?()
                     return
                 }
             }
           
-            if listCellViewModels.count < 100 {
+            if listCellViewModels.count < limitedCount {
                 index += 1
                 self.fetchAllUser(since:String(index))
             }

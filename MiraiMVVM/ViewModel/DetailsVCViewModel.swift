@@ -23,10 +23,8 @@ class DetailsVCViewModel: NSObject, APIManagerDelegate {
         
     //Delegate
     func fetchSingleUserSuccess(_presenter: APIManager, didfetch user: DetailsViewModel) {
-        
         detailsViewModel = user
         onRequestEnd!()
-        
     }
     
 }
