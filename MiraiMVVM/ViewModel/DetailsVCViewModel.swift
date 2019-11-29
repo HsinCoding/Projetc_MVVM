@@ -13,6 +13,7 @@ class DetailsVCViewModel: NSObject, APIManagerDelegate {
     var onRequestEnd: (() -> Void)?
     var manager:APIManager?
     public var detailsViewModel: DetailsViewModel?
+    
     //Methods
     func fetchSingleUser(username: String)  {
         APIManager.shared.fetchSingleUser(username: username)
@@ -20,7 +21,7 @@ class DetailsVCViewModel: NSObject, APIManagerDelegate {
     }
 
         
-     //Delegate
+    //Delegate
     func fetchSingleUserSuccess(_presenter: APIManager, didfetch user: DetailsViewModel) {
         
         detailsViewModel = user

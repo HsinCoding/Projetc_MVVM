@@ -8,24 +8,34 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, UITextViewDelegate {
 
     let viewModel = DetailsVCViewModel()
     var username: String = ""
-    
+
     @IBOutlet weak var avatarImg: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var siteAdminLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var blogLabel: UILabel!
+    @IBOutlet weak var siteAdminView: UIView!
+    @IBOutlet weak var blogTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        blogTextView.delegate = self
+        self.setUI()
         bindViewModel()
         viewModel.fetchSingleUser(username: self.username)
-       
+    }
+    
+    
+    // MARK: - UI Setting
+     func setUI() {
+        self.avatarImg.layer.cornerRadius = self.avatarImg.frame.size.width / 2
+        self.siteAdminLabel.layer.cornerRadius = 15
+        self.siteAdminLabel.clipsToBounds = true
     }
     
     // MARK: - Bind ViewModel
@@ -38,10 +48,24 @@ class DetailsViewController: UIViewController {
     }
    
     func setData(model:DetailsViewModel) {
+        self.loginLabel.text = model.login
+        if model.siteAdmin {
+            self.siteAdminLabel.text = "Staff"
+            self.siteAdminView.isHidden = false
+        } else {
+            self.siteAdminView.isHidden = true
+        }
+        
         self.nameLabel.text = model.name
         self.locationLabel.text = model.location
-        self.blogLabel.text = model.blog
         
+        let attributedString = NSMutableAttributedString(string: model.blog)
+        let myAttribute = [ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17) ]
+        attributedString.addAttribute(.link, value: model.blog, range: NSMakeRange(0, model.blog.count))
+        attributedString.addAttributes(myAttribute, range: NSMakeRange(0, model.blog.count))
+        
+        blogTextView.attributedText = attributedString
+       
         model.onImageDownloaded = {[weak self] image in
             DispatchQueue.main.async {
                 self?.avatarImg.image = image
@@ -49,5 +73,18 @@ class DetailsViewController: UIViewController {
         }
         model.getImage()
     }
-
+    
+    // MARK: - UITextViewDelegate
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        
+        UIApplication.shared.open(URL)
+        return false
+    }
+    
+    // MARK: - Dismiss VC
+    
+    @IBAction func dismissAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

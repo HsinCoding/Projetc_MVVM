@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,APIManagerDelegate {
 
-
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var avtivityView: UIActivityIndicatorView!
     
     let viewModel = VCViewModel()
     
@@ -23,8 +23,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         bindViewModel()
         registerCustomCell()
         viewModel.fetchAllUser(since: "0")
-      
-        
+        self.avtivityView.startAnimating()
     }
     
     // MARK: - RegisterCustomCell
@@ -37,8 +36,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func bindViewModel() {
          viewModel.onRequestEnd = { [weak self] in
              DispatchQueue.main.async {
-                print(self!.viewModel.listCellViewModels.count)
                 self?.tableView.reloadData()
+                self?.avtivityView.stopAnimating()
              }
          }
      }

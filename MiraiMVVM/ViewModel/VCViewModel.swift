@@ -24,7 +24,6 @@ class VCViewModel: NSObject, APIManagerDelegate {
     
     //Delegate
     func fetchAllUserSuccess(_presenter: APIManager, didfetch users: [ListCellViewModel]) {
-      
         if listCellViewModels.count == 0 {
             listCellViewModels = users
             if listCellViewModels.count < 100 {
@@ -32,7 +31,7 @@ class VCViewModel: NSObject, APIManagerDelegate {
                 self.fetchAllUser(since:String(index))
             }
         } else {
-            
+        
             for item in users {
                 listCellViewModels.append(item)
                 if listCellViewModels.count == 100 {
