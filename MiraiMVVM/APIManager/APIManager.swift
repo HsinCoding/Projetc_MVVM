@@ -99,13 +99,13 @@ class APIManager: NSObject {
                     let receivedEventsURL = data["received_events_url"] as? String ?? "None"
                     let type = data["type"] as? String ?? "None"
                     guard let siteAdmin = data["site_admin"] as? Bool else { return  }
-                    let name = data["name"] as? String ?? "None"
+                    let name = data["name"] as? String ?? ""
                     let company = data["company"] as? String ?? "None"
                     let blog = data["blog"] as? String ?? "None"
                     let location = data["location"] as? String ?? "None"
                     let email = data["email"] as? String ?? "None"
                     let hireable = data["hireable"] as? String ?? "None"
-                    let bio = data["bio"] as? String ?? "None"
+                    let bio = data["bio"] as? String ?? ""
                     let public_repos = data["public_repos"] as? Int ?? 0
                     let public_gists = data["public_gists"] as? Int ?? 0
                     let followers = data["followers"] as? Int ?? 0

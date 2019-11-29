@@ -18,7 +18,7 @@ class DetailsViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var siteAdminLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var blogLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var siteAdminView: UIView!
     @IBOutlet weak var blogTextView: UITextView!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
@@ -37,6 +37,13 @@ class DetailsViewController: UIViewController, UITextViewDelegate {
         self.avatarImg.layer.cornerRadius = self.avatarImg.frame.size.width / 2
         self.siteAdminLabel.layer.cornerRadius = 15
         self.siteAdminLabel.clipsToBounds = true
+        
+        self.loginLabel.text = ""
+        self.nameLabel.text = ""
+        self.bioLabel.text = ""
+        self.blogTextView.text = ""
+        self.locationLabel.text = ""
+        self.siteAdminView.isHidden = true
     }
     
     // MARK: - Bind ViewModel
@@ -60,9 +67,9 @@ class DetailsViewController: UIViewController, UITextViewDelegate {
         
         self.nameLabel.text = model.name
         self.locationLabel.text = model.location
-        
+        self.bioLabel.text = model.bio
         let attributedString = NSMutableAttributedString(string: model.blog)
-        let myAttribute = [ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17) ]
+        let myAttribute = [ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15) ]
         attributedString.addAttribute(.link, value: model.blog, range: NSMakeRange(0, model.blog.count))
         attributedString.addAttributes(myAttribute, range: NSMakeRange(0, model.blog.count))
         

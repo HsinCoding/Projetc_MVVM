@@ -62,7 +62,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     // MARK: - UITableViewDelegate
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailsVC = DetailsViewController()
         let listCellViewModel = viewModel.listCellViewModels[indexPath.row]
