@@ -69,10 +69,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailsVC = DetailsViewController()
-        let listCellViewModel = viewModel.listCellViewModels[indexPath.row]
-        detailsVC.username = listCellViewModel.login
-        self.present(detailsVC, animated: true, completion: nil)
+        Router.shared.showDetailsVC(vc: self, viewModel: self.viewModel, indexPathRow: indexPath.row)
     }
     
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE73F30C2394FD70008A99FE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73F30B2394FD70008A99FE /* Router.swift */; };
 		CEA81B5A238E615F00569E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B59238E615F00569E38 /* AppDelegate.swift */; };
 		CEA81B5C238E615F00569E38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B5B238E615F00569E38 /* SceneDelegate.swift */; };
 		CEA81B5E238E615F00569E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA81B5D238E615F00569E38 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE73F30B2394FD70008A99FE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CEA81B56238E615F00569E38 /* MiraiMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiraiMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA81B59238E615F00569E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA81B5B238E615F00569E38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE73F30A2394FD59008A99FE /* Router  */ = {
+			isa = PBXGroup;
+			children = (
+				CE73F30B2394FD70008A99FE /* Router.swift */,
+			);
+			path = "Router ";
+			sourceTree = "<group>";
+		};
 		CEA81B4D238E615F00569E38 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 		CEA81B58238E615F00569E38 /* MiraiMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				CE73F30A2394FD59008A99FE /* Router  */,
 				CEA81B95238FA73C00569E38 /* Cell */,
 				CEA81B90238E734D00569E38 /* APIManager */,
 				CEA81B8D238E6DC200569E38 /* ViewModel */,
@@ -327,6 +338,7 @@
 				CEA81B94238E758900569E38 /* ListCellViewModel.swift in Sources */,
 				CEA81B92238E736100569E38 /* APIManager.swift in Sources */,
 				CEA81BA3239001A600569E38 /* DetailsViewController.swift in Sources */,
+				CE73F30C2394FD70008A99FE /* Router.swift in Sources */,
 				CEA81B5E238E615F00569E38 /* ViewController.swift in Sources */,
 				CEA81B5A238E615F00569E38 /* AppDelegate.swift in Sources */,
 				CEA81BA62390055A00569E38 /* DetailsVCViewModel.swift in Sources */,
