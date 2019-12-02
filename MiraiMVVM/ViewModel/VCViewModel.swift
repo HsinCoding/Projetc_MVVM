@@ -10,7 +10,6 @@ import UIKit
 
 class VCViewModel: NSObject, APIManagerDelegate {
    
-    
     var onRequestEnd: (() -> Void)?
     public var listCellViewModels: [ListCellViewModel] = []
     var manager:APIManager?

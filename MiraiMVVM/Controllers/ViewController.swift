@@ -18,13 +18,19 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        bindViewModel()
-        registerCustomCell()
+        self.tableViewInheritance()
+        self.bindViewModel()
+        self.registerCustomCell()
         viewModel.fetchAllUser(since: "0")
         self.avtivityView.startAnimating()
     }
+    
+    // MARK: - TableView Delegate and datasource inheritance
+    func tableViewInheritance() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
     
     // MARK: - RegisterCustomCell
     
